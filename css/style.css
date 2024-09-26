@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    font-family: 'Cascadia Code', monospace;
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+  }
+  
+  /* Welcome Section */
+  #welcome {
+    background-color: #f4f4f4;
+    text-align: left;
+    padding: 50px;
+  }
+  
+  /* Logo RevoU */
+  .logo-icon {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }  
+
+  /* Profile Section */
+  .avatar {
+    flex-wrap: wrap;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  
+  /* Banner Gambar */
+  .banner-gambar {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+  }
+
+  .img-slideshow {
+    width:60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+
+  .img-slideshow:hover {
+    transform: scale(1.02);
+  }
+
+  /* Section Profile */
+  #our-profile {
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+  }
+
+  #our-profile h1 {
+    text-align: center;
+    padding: 50px 0 20px 0;
+    font-size: 40px;
+  }
+
+  .box-our-profile {
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  .box-images .images-profile {
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .box-images .images-profile:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+    /* Form Section */
+  #contact {
+      padding: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between the form fields */
+    max-width: 400px; /* Optional: Limit form width */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+  }
+  
+  form input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* Align the radio buttons and labels */
+  .gender-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gender-group label {
+    margin: 0;
+  }
+  
+  /* Submit Button */
+  form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form Section */
+#contact {
+    padding: 20px;
+  }
+  
+/* General container styling for the form and result sections */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Style the form and result to take up full width on small screens */
+form, #form-result {
+  flex: 1 1 100%; /* Ensure it takes full width on smaller screens */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Scrollable box for the results */
+#form-result {
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Style for individual submission result */
+.submission-result {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+/* Responsive layout adjustments using media queries */
+@media (min-width: 768px) {
+  /* On medium to large screens, display the form and results side by side */
+  .form-container {
+    flex-direction: row;
+  }
+
+  form {
+    flex: 1;
+    max-width: 45%; /* Make the form take up 45% of the available width */
+  }
+
+  #form-result {
+    flex: 1;
+    max-width: 45%; /* Make the results take up 45% of the available width */
+  }
+}
+
+@media (max-width: 767px) {
+  /* On small screens, make the form and result take full width */
+  .form-container {
+    flex-direction: column;
+  }
+
+  form, #form-result {
+    flex: 1 1 100%; /* Ensure it takes full width on smaller screens */
+  }
+
+  #form-result {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+/* Responsive navigation bar */
+nav {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+nav ul {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+}
+
+nav ul li {
+  flex: 1; /* Ensure each list item takes up equal space */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Stack navigation items on smaller screens */
+    padding: 0;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
